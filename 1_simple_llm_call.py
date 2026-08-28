@@ -17,3 +17,7 @@ chain = prompt | model | parser
 # Run it
 result = chain.invoke({"question": "What is the capital of Peru?"})
 print(result)
+
+
+# Since we used langsmith , we can have a trace , Latency , Stats , TotalTokens
+# within LANGCHAIN_PROJECT="langsmith-demo" created in .env file
