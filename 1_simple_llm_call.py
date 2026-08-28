@@ -21,3 +21,5 @@ print(result)
 
 # Since we used langsmith , we can have a trace , Latency , Stats , TotalTokens
 # within LANGCHAIN_PROJECT="langsmith-demo" created in .env file
+
+# NOTE : here we used PromptTemplate , ChatOpenAI call , StrOutputParcer, this entire inputs and their outputs will be captured in Langsmith as individual component
