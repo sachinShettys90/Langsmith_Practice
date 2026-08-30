@@ -35,7 +35,10 @@ prompt = ChatPromptTemplate.from_messages([
 
 # 5) Chain
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-def format_docs(docs): return "\n\n".join(d.page_content for d in docs)
+
+
+def format_docs(docs):
+    return "\n\n".join(d.page_content for d in docs)
 
 
 parallel = RunnableParallel({
