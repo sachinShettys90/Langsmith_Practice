@@ -48,6 +48,13 @@ branchChain = RunnableBranch(
 
 finalchain = RunnableSequence(feedbackChain, branchChain)
 
-result = finalchain.invoke({'input': " i don't like this mobile"})
+config = {
+    'run_name': 'conditional chain',
+    'tags': ['llm_app', 'report generation', 'summarization'],
+    'metadata': {'model': 'gpt-4o'}
+}
+
+result = finalchain.invoke(
+    {'input': " i don't like this mobile"}, config=config)
 
 print(result)
