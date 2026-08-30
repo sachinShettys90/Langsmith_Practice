@@ -53,3 +53,8 @@ print("PDF RAG ready. Ask a question (or Ctrl+C to exit).")
 q = input("\nQ: ")
 ans = chain.invoke(q.strip())
 print("\nA:", ans)
+
+
+# Here we have 2 drawback
+# 1. every time its performing chunking , retreiving and generation , its time consuming
+# 2. There is no trace for chunks, retrieving part
