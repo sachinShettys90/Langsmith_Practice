@@ -27,6 +27,13 @@ emb = OpenAIEmbeddings(model="text-embedding-3-small")
 vs = FAISS.from_documents(splits, emb)
 retriever = vs.as_retriever(search_type="similarity", search_kwargs={"k": 4})
 
+# retriever is also runnable
+# we can ask question by invoking and it will give top 4 chunks
+# NOTE: retriever.invoke("Question")
+# [Document(id='1',page_content="ABC"),Document(id='2',page_content="ABC2"),
+# Document(id='3',page_content="ABC3"),Document(id='4',page_content="ABC4")]
+
+
 # 4) Prompt
 prompt = ChatPromptTemplate.from_messages([
     ("system", "Answer ONLY from the provided context. If not found, say you don't know."),
@@ -35,6 +42,8 @@ prompt = ChatPromptTemplate.from_messages([
 
 # 5) Chain
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+
+# NOTE: Here we are writing the function to concatinate all the retrieved 4 chunks page_content
 
 
 def format_docs(docs):
