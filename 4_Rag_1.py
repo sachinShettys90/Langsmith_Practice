@@ -65,5 +65,8 @@ print("\nA:", ans)
 
 
 # Here we have 2 drawback
-# 1. every time its performing chunking , retreiving and generation , its time consuming
-# 2. There is no trace for chunks, retrieving part
+# 1. There is no trace for chunks, retrieving part
+# 2. every time its performing chunking , retreiving and generation , its time consuming
+
+# 1------For tracing       NOTE: refer 5_RAG_2.py
+# 2------To avoid performing chunking splitting retrieving and generation every time , we are identifying with index     NOTE: refer 6_RAG_3.py
