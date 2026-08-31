@@ -69,4 +69,4 @@ print("\nA:", ans)
 # 2. every time its performing chunking , retreiving and generation , its time consuming
 
 # 1------For tracing       NOTE: refer 5_RAG_2.py
-# 2------To avoid performing chunking splitting retrieving and generation every time , we are identifying with index     NOTE: refer 6_RAG_3.py
+# 2------To avoid performing chunking splitting retrieving and generation every time , we are identifying with index     NOTE: refer 7_RAG_4.py
